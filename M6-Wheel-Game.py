@@ -1,13 +1,29 @@
-#M6 python word game
+#M6 Wheel of fortune sim
+
+#rules notes: players can buy vowels whenever during their turn, ie don't need to spin first
+# players spin for each consonant guess, and CAN spin the same value
+# only 19 instead of 24 wheel options, bankrupt, lose turn and 17 values 100 to 900 by 50
+# player 1 starts each round
 
 import random
 
-f = open("test_words.txt", "r")
+f = open("words.txt", "r")
 wordList = f.read().split()
 # globals for tracking multiple games
 usedWords = []
-wins = losses = 0
-playGame = True
+gameRound = 0
+playTurn = 1
+playMoney = [0,0,0]
+
+
+# bankrupt = 0,  lose turn = 1, left as ints so can do math operation on rest of values more easily
+wheelOptions = []
+for i in range(2,20):
+    wheelOptions.append(i*50)
+wheelOptions.append(0)
+wheelOptions.append(1)
+print(wheelOptions)
+
 
 # run one instance of the game
 def runGame():

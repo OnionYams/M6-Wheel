@@ -1,0 +1,25 @@
+psuedo
+
+array to track used words
+global int track round
+global int track player turn
+global array with players' money values
+array for wheel values 
+str WORD to track correct word in lowercase with duplicate for workaround
+str ANSWERED, filled with _ equal to WORD length
+char LETTERS to track guessed letters, including vowels
+function for round 1,2 to show menu
+text menu, display whose turn, options, ie spin wheel, buy vowel guess word
+check that guess is valid, ie letter or word and not in LETTERS and not vowel
+covert guess to lowercase, compare to word, if match replace matching _ in ANSWERED and increment a value to multiply by their money spin
+if correct, add money to bank of current player and continue, spin again
+to buy vowel, check whose turn vs their bank value
+if get wrong go to next player, otherwise give menu again
+if ANSWERED == WORD break, end round
+new function for round 3
+round 3 check array for who has most money
+choose new word, iterate through it as if playing round 1,2 to reveal R-S-T-L-N-E 
+4 vars 3 input consonants at once, one vowel NOT e
+time package track 5 second limit
+
+
